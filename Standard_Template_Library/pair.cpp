@@ -1,4 +1,5 @@
 #include<iostream> // This is a header file for input and output operations so that we can use cout and cin.
+
 using namespace std; // This allows us to use standard library features without pregiving the std:: prefix.
 // Standard Template Library (STL) is a powerful set of C++ template classes to provide general-purpose classes and functions.
 // STL provides algorithms and data structures like vectors, lists, queues, stacks, etc.
