@@ -37,6 +37,40 @@ void explainvector()
         cout << *it << " "; // Dereferencing the iterator to get the value it points to.
     }
     cout << endl;
+    // We can also use range-based for loop to iterate through the vector.
+    cout << "Using range-based for loop: ";
+    for (const auto& element : v1) {
+        cout << element << " "; // Outputs each element in vector v1.
+    }
+    //foreach loop is also used to iterate through the vector.
+    cout << endl;
+    // We can also use the at() function to access elements at a specific index.
+    cout << "Element at index 0: " << v1.at(0) << endl; // Outputs the first element of vector v1.
+    cout << "Element at index 1: " << v1.at(1) << endl; // Outputs the second element of vector v1.
+    cout << "Element at index 2: " << v1.at(2) << endl; // Outputs the third element of vector v1.
+    // We can also use the front() and back() functions to access the first and last elements of the vector.
+    cout << "First element: " << v1.front() << endl; // Outputs the first element of vector v1.
+    cout << "Last element: " << v1.back() << endl; // Outputs the last element of vector v1.
+    // We can also remove elements from the vector using pop_back() function.
+    v1.pop_back(); // Removes the last element of vector v1.
+    cout << "v1 after pop_back: ";
+    for (const auto& element : v1) {
+        cout << element << " "; // Outputs the elements of vector v1 after removing the last element.
+    }
+    cout << endl;
+    // We can also clear the vector using clear() function.
+    v1.clear(); // Clears all elements from vector v1.
+    cout << "v1 size after clear: " << v1.size() << endl; // Outputs the size of vector v1 after clearing, which is 0.
+    // Vectors can also hold different types of values.
+    vector<pair<int, string>> v4; // Declaration of a vector v4 that can hold pairs of integers and strings.
+    v4.push_back(make_pair(1, "one")); // Adds a pair (1, "one") to vector v4.
+    v4.push_back(make_pair(2, "two")); // Adds a pair (2, "two") to vector v4.
+    cout << "v4 pairs: ";
+    for (const auto& p : v4) {
+        cout << "(" << p.first << ", " << p.second << ") "; // Outputs each pair in vector v4.
+    }
+    cout << endl;
+
 
 }
 int main() // The main function where the program execution starts.
