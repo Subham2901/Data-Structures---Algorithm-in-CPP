@@ -8,6 +8,7 @@ void explainvector()
     vector<int>v1; // Declaration of a vector v1 that can hold integers.
     vector<int>v2(5, 10); // Declaration and initialization of a vector v2 with 5 elements, each initialized to 10.
     vector<int>v3{1, 2, 3, 4, 5}; // Declaration and initialization of a vector v3 using uniform initialization syntax.
+    vector<int>vec(5); // This will assign 5 zeros to the vector as we have declared the space but havent initialised those spaces with any values.
     // In the above three ways we can declare and initialise vectors in STL in CPP.
     cout << "v1 size: " << v1.size() << endl; // Outputs the size of vector v1, which is 0.
     cout << "v2 size: " << v2.size() << endl; // Outputs the size of vector v2, which is 5.
@@ -48,6 +49,34 @@ for(vector<int>::iterator i=beginItr2;i<endItr2;i++)
 
     // If we wanted to print the adress of the location we would have used & instead.
 }
+
+// Auto is a c++ keyword that automatically assigns the type of the operator.
+
+for (auto i =beginItr2;i<endItr2;i++)
+{
+    cout<<*i<<" ";
+
+}
+cout<<endl;
+
+for(auto i :v3)
+{cout<<i<<" ";
+
+}
+cout<<endl;
+
+//Reverse Iterator
+
+auto reverseBegin= v2.rbegin(); // This would be pointing to the last element of the vector
+auto reverseEnd=v2.rend();// THis would be pointing somewhere before the first element
+
+for(auto i =reverseBegin;i<reverseEnd;i++) // THis will print the vectors from start to end.
+{
+    cout<<*i<<" ";
+}
+cout<<endl;
+
+
 
 
 
@@ -105,6 +134,15 @@ for(vector<int>::iterator i=beginItr2;i<endItr2;i++)
 
     }
     cout<<endl;
+
+
+
+    //Copy a vector:
+     // Scenario 1: Copying the entire vector
+     vector<int> dupevec(vec); // This  will copy the entire vector inside the vector dupevec.
+     // Now if we want to add a range of the vectors in that case we will use the command
+     vector<int> rangeVec = (vec.begin()+1,vec.end()); // Here in this case we would know that the vector will store the values skipping just the first element.
+     
 
 
 
