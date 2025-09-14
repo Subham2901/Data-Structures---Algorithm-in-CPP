@@ -127,7 +127,7 @@ cout<<endl;
     v4.push_back(make_pair(2, "two")); // Adds a pair (2, "two") to vector v4.
     cout << "v4 pairs: ";
     // Iterating through vectors
-    vector<int> vec={1,2,3,4,5,6};
+   // vector<int> vec={1,2,3,4,5,6};
     for(int i = 0; i<vec.size();i++)
     {
         cout<<vec[i]<<" ";
@@ -139,9 +139,9 @@ cout<<endl;
 
     //Copy a vector:
      // Scenario 1: Copying the entire vector
-     vector<int> dupevec(vec); // This  will copy the entire vector inside the vector dupevec.
+     //vector<int> dupevec(vec); // This  will copy the entire vector inside the vector dupevec.
      // Now if we want to add a range of the vectors in that case we will use the command
-     vector<int> rangeVec = (vec.begin()+1,vec.end()); // Here in this case we would know that the vector will store the values skipping just the first element.
+     //vector<int> rangeVec = (vec.begin()+1,vec.end()); // Here in this case we would know that the vector will store the values skipping just the first element.
      
 
 
